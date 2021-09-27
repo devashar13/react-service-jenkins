@@ -11,7 +11,7 @@
     "build": "./distribution/build"
   },
   "scripts": {
-    "test": "npm test",
+    "test": "react-scripts test",
     "coverage": "istanbul cover --report cobertura node_modules/.bin/_mocha -- test/*_test.js test/api/*_test.js && mocha test/*_test.js test/api/*_test.js --reporter mocha-junit-reporter --reporter-options mochaFile=./results/test-results.xml",
     "start": "node server.js",
     "clean:build": "node_modules/.bin/rimraf $npm_package_config_distribution",
