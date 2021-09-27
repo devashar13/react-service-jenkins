@@ -12,8 +12,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "test": "istanbul cover node_modules/.bin/_mocha -- test/*_test.js test/api/*_test.js",
-    "coverage": "istanbul cover --report cobertura node_modules/.bin/_mocha -- test/*_test.js test/api/*_test.js && mocha test/*_test.js test/api/*_test.js --reporter mocha-junit-reporter --reporter-options mochaFile=./results/test-results.xml",
+    "test": "react-scripts test",
     "start": "node server.js",
     "clean:build": "node_modules/.bin/rimraf $npm_package_config_distribution",
     "create:build": "node_modules/.bin/mkdirp $npm_package_config_build",
@@ -28,6 +27,7 @@
     "dist": "npm run build && npm run package",
     "postdist": "echo Successfully packaged $npm_package_config_service v\"$npm_package_version\" service"
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
